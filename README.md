@@ -23,3 +23,35 @@ race have completed 1500m
 - Any currently running races, showing distance covered, horse position, current time
 - The last 5 race results (top 3 positions and times to complete 1500m)
 - The best ever time, and the stats of the horse that generated it
+
+
+## Docker Stuff
+
+### Config
+Check whether all is well in the docker composer config file (docker-compose.yml).
+    docker-compose config
+
+### Build
+    docker-compose up
+    
+### Rebuild
+`Dockerfile` changes will not reflect unless we re-build everything.
+
+    docker-compose up --build
+
+### Interacting with Docker containers
+Run a command inside a container with `docker exec`. To logon to MySQL, use MySQL image name, for that run `docker ps -a`. The name of the container is `mysql-server-80`:
+
+    docker exec -it mysql-server-80  bash -l
+
+### Import DB
+    docker exec -i mysql-server-80  mysql -u root -p.rootpasswd. horse_racing_simulator < ./sql/horse_racing_simulator.sql
+    
+### Turn Off
+    docker-compose down
+
+### Delete all containers
+    docker rm $(docker ps -a -q)
+    
+### Delete all images
+    docker rmi $(docker images -q)

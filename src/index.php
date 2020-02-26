@@ -6,7 +6,7 @@
 /**
  * base url
  */
-$baseURL = 'http://localhost/index.php/';
+$baseURL = 'http://localhost:8000/index.php/';
 
 /**
  * default controller

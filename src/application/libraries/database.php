@@ -23,15 +23,15 @@ class database_library
     /**
      * @var string db host
      */
-    private $host = 'localhost';
+    private $host = 'mysql';
     /**
      * @var string db user
      */
-    private $user = 'race';
+    private $user = 'race_user';
     /**
      * @var string db password
      */
-    private $pass = 'race';
+    private $pass = '.userpasswd';
     /**
      * @var string db name
      */
