@@ -1,9 +1,10 @@
 ## Developed and tested on:
-LAMP
+### LAMP
 - Ubuntu 18.04
 - Apache/2.4.34 (Ubuntu)
 - MySQL 5.7.25-0ubuntu0.18.10.2
 - PHP 7.2
+### and later on on Docker
 
 ### Horse Racing Simulator Game implemented using PHP and relational database
 - Each horse has 3 stats: speed, strength, endurance
@@ -49,6 +50,9 @@ Run a command inside a container with `docker exec`. To logon to MySQL, use MySQ
     
 ### Turn Off
     docker-compose down
+
+### Turn Off all Docker containers:
+    docker stop $(docker ps -a -q)
 
 ### Delete all containers
     docker rm $(docker ps -a -q)
