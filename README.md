@@ -59,3 +59,13 @@ Run a command inside a container with `docker exec`. To logon to MySQL, use MySQ
     
 ### Delete all images
     docker rmi $(docker images -q)
+    
+### The official command to remove all unused data (including volumes without containers) will be with docker 1.13 
+
+    docker system prune  
+
+### If you want to limit to volumes alone, [removing only unused volumes][1]:
+
+    docker volume prune
+
+You also have `docker image prune`, `docker container prune`
