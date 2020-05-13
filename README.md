@@ -69,3 +69,14 @@ Run a command inside a container with `docker exec`. To logon to MySQL, use MySQ
     docker volume prune
 
 You also have `docker image prune`, `docker container prune`
+
+### To remove everything for this project:
+
+    docker system prune -a
+    WARNING! This will remove:
+      - all stopped containers
+      - all networks not used by at least one container
+      - all images without at least one container associated to them
+      - all build cache
+
+    Are you sure you want to continue? [y/N] y
